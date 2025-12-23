@@ -50,7 +50,9 @@ const Contact = () => {
       toast.success("Message sent! We'll get back to you soon.");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
-      console.error("Failed to submit contact form:", error);
+      if (import.meta.env.DEV) {
+        console.error("Failed to submit contact form:", error);
+      }
       toast.error("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
