@@ -1,17 +1,11 @@
 import { Instagram, Facebook, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const HeroSection = () => {
-  return (
-    <section className="relative rounded-[2.5rem] overflow-hidden bg-muted my-12 animate-fade-in">
+  return <section className="relative rounded-[2.5rem] overflow-hidden bg-muted my-12 animate-fade-in">
       <div className="grid md:grid-cols-2 gap-6 md:gap-12 p-6 md:p-12 lg:p-16">
         {/* Left side - Image */}
         <div className="relative aspect-[4/3] md:aspect-auto rounded-[2rem] overflow-hidden animate-scale-in">
-          <img
-            src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=1920&q=80"
-            alt="Hero"
-            className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-          />
+          <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=1920&q=80" alt="Hero" className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
         </div>
 
         {/* Right side - Content */}
@@ -32,33 +26,19 @@ const HeroSection = () => {
             </Button>
 
             <div className="flex items-center gap-4">
-              <a
-                href="#instagram"
-                className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
+              <a href="#instagram" className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110" aria-label="Instagram">
+                <Instagram className="w-5 h-5 bg-destructive-foreground text-destructive border-destructive" />
               </a>
-              <a
-                href="#facebook"
-                className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110"
-                aria-label="Facebook"
-              >
+              <a href="#facebook" className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a
-                href="#linkedin"
-                className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110"
-                aria-label="LinkedIn"
-              >
+              <a href="#linkedin" className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
